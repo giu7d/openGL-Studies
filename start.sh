@@ -1,15 +1,23 @@
-# Compile the OpenGLab
-# Exec.: 
+# Compile the OpenGL Studies Code
+# Exec. on terminal: 
 # $ sh start.sh
 
+
+# FILES: Set files that you want to compile
 FILES="./main.cpp"
+# OUT: Set the compiled program name
 OUT="main" 
 
-if g++ --std=c++17 '$FILES' -o '$OUT' -lglut -lGL | echo "Compiling..."; then
+# Operations
+COMPILE="g++ --std=c++17 $FILES -o $OUT -lglut -lGL"
+RUN="./$OUT"
 
-  echo "Compiled Successful"
+# Depuration
+if $COMPILE; then
   
-  if ./'$OUT' | echo "Running..."; then
+  echo "Compiled Successful"
+
+  if $RUN; then
     echo "Closed"
   else
     echo "Error: On running -> ./main"
