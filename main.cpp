@@ -46,9 +46,44 @@ void draw(void)
   glFlush();
 }
 
-void init (void) 
-{
-  glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+// void init (void) 
+// {
+//   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+// }
+
+void backgroundStyle(int operation) {
+
+  switch (operation)
+  {
+  case 0:
+    glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+    break;
+  
+  case 1:
+    glClearColor(0.0f, 1.0f, 0.0f, 1.0f);
+    break;
+  
+  case 2:
+    glClearColor(0.0f, 0.0f, 1.0f, 1.0f);
+    break;
+  
+  default:  
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    break;
+  }
+  glutPostRedisplay();
+}
+
+void menu() {
+  
+  int menu = glutCreateMenu(backgroundStyle);
+
+  glutAddMenuEntry("Vermelho", 0);
+  glutAddMenuEntry("Verde", 1);
+  glutAddMenuEntry("Azul", 2);
+  glutAddMenuEntry("Preto", 3);
+
+  glutAttachMenu(GLUT_RIGHT_BUTTON);
 }
 
 int main(int argc, char *argv[])
@@ -58,13 +93,14 @@ int main(int argc, char *argv[])
   glutInitWindowSize(300, 300);
   glutInitWindowPosition(100, 100);
   
-  glutCreateWindow("OPENGLAB");
+  glutCreateWindow("OPENGLLABS");
   glutDisplayFunc(draw);
 
   // Input do Teclado
   glutKeyboardFunc(inputKeyboard);
 
-  init();  
+  backgroundStyle(3);  
+  menu();
 
   glutMainLoop();
   
