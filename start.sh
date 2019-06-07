@@ -3,10 +3,15 @@
 # $ sh start.sh
 
 
-# FILES: Set files that you want to compile
+# FILES: 
+# Set files that you want to compile, like "./ex1-hello-world.cpp"
 FILES="./main.cpp"
-# OUT: Set the compiled program name
+
+# OUT: 
+# Set the compiled program name
 OUT="main" 
+
+
 
 # Operations
 COMPILE="g++ --std=c++17 $FILES -o $OUT -lglut -lGL"
