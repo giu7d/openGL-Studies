@@ -20,7 +20,7 @@ void Timer(int value);
 void Init (void);
 void ScaleWindow(GLsizei w, GLsizei h);
 void DrawHouse(void);
-void DrawMissil(void);
+void DrawRocket(void);
 
 // KEYBOARD
 void inputKeyboard(unsigned char key, int x, int y)
@@ -50,14 +50,14 @@ void Draw(void)
 {
   glMatrixMode(GL_MODELVIEW);
   glClear(GL_COLOR_BUFFER_BIT);
-  DrawMissil();
+  DrawRocket();
 
   glutSwapBuffers(); // � o flush para imagens bufferizadas
   // glFlush();
 }
 
 
-void DrawMissil(void)
+void DrawRocket(void)
 {
 
   glLoadIdentity();
