@@ -11,10 +11,8 @@ FILES="./main.cpp"
 # Set the compiled program name
 OUT="main" 
 
-
-
 # Operations
-COMPILE="g++ --std=c++17 $FILES -o $OUT -lglut -lGL"
+COMPILE="g++ --std=c++17 $FILES -o $OUT -lglut -lGL -lGLU"
 RUN="./$OUT"
 
 # Depuration
