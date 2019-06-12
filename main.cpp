@@ -109,7 +109,7 @@ void ScaleWindow(GLsizei w, GLsizei h)
 		windowHeight = 5.0f;
   }
 
-  gluOrtho2D(0.0f, windowWidth, 0.0f, windowHeight);
+  gluOrtho2D(2.5f, windowWidth, 2.5f, windowHeight);
 }
 
 
