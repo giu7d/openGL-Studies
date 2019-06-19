@@ -5,7 +5,7 @@
 
 # FILES: 
 # Set files that you want to compile, like "./ex1-hello-world.cpp"
-FILES="./main.cpp"
+FILES="./rocket.cpp"
 
 # OUT: 
 # Set the compiled program name
